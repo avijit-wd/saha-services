@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SahaDigitalServices() {
   const services = [
     "PAN Card Application Support",
@@ -58,8 +60,13 @@ export default function SahaDigitalServices() {
               Professional service center with banking assistance, insurance
               support, registration services and online application help.
             </p>
-            <div className="mt-4 border-2 border-dashed rounded-xl p-5 text-center">
-              Upload your shop front image here
+            <div className="mt-4 relative w-full h-56 rounded-xl overflow-hidden">
+              <Image
+                src="/images/WhatsApp Image 2026-05-25 at 8.18.59 PM.jpeg"
+                alt="Saha Digital Services shop front"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -72,6 +79,50 @@ export default function SahaDigitalServices() {
           {services.map((service) => (
             <div key={service} className="bg-white p-5 rounded-3xl shadow">
               ✅ {service}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto p-8">
+        <h2 className="text-3xl font-bold mb-6 text-center">Our Shop</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.58 PM (1).jpeg",
+              alt: "Shop front view",
+            },
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.59 PM.jpeg",
+              alt: "Shop exterior with Fino banner",
+            },
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.58 PM.jpeg",
+              alt: "Shop interior",
+            },
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.58 PM (2).jpeg",
+              alt: "Waiting area",
+            },
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.59 PM (1).jpeg",
+              alt: "Service desk",
+            },
+            {
+              src: "/images/WhatsApp Image 2026-05-25 at 8.18.59 PM (2).jpeg",
+              alt: "Office interior",
+            },
+          ].map(({ src, alt }) => (
+            <div
+              key={src}
+              className="relative h-52 rounded-2xl overflow-hidden shadow"
+            >
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
             </div>
           ))}
         </div>
