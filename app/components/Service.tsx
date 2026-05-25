@@ -62,7 +62,7 @@ export default function SahaDigitalServices() {
             </p>
             <div className="mt-4 relative w-full h-56 rounded-xl overflow-hidden">
               <Image
-                src="/images/WhatsApp Image 2026-05-25 at 8.30.18 PM.jpeg"
+                src="/images/WhatsApp Image 2026-05-25 at 8.18.59 PM (2).jpeg"
                 alt="Saha Digital Services shop front"
                 fill
                 className="object-cover scale-110"
